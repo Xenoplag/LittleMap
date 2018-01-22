@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MapTest3</string>
+    <string name="lng"></string>
+    <string name="lat"></string>
+    <string name="title_activity_basic_navi">BasicNaviActivity</string>
+</resources>
