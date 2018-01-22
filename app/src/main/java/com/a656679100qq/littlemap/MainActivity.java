@@ -103,15 +103,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //导航按钮监听
-        final Button navigation = (Button)findViewById(R.id.navigation);
-        navigation.setOnClickListener(new View.OnClickListener() {
+        //步行按钮监听
+        final Button walk = (Button)findViewById(R.id.walk);
+        walk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Animation animation=new AlphaAnimation(1.0f,0.0f);
                 animation.setDuration(150);
-                navigation.startAnimation(animation);
+                walk.startAnimation(animation);
                 Intent intent = new Intent(MainActivity.this,BasicNaviActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //驾车按钮监听
+        final Button car =(Button)findViewById(R.id.car);
+        car.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animation animation=new AlphaAnimation(1.0f,0.0f);
+                animation.setDuration(150);
+                car.startAnimation(animation);
+                Intent intent = new Intent(MainActivity.this,CustomCarActivity.class);
                 startActivity(intent);
             }
         });

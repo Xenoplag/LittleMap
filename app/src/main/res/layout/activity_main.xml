@@ -64,14 +64,25 @@
             android:layout_alignParentLeft="true"/>
 
         <Button
-            android:id="@+id/navigation"
+            android:id="@+id/walk"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="20dp"
             android:layout_above="@id/loca"
             android:layout_alignParentLeft="true"
-            android:background="@drawable/navigation"
+            android:background="@drawable/lwalk"
+            />
+
+        <Button
+            android:id="@+id/car"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@id/walk"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/car2"
             />
         <Button
             android:id="@+id/route"

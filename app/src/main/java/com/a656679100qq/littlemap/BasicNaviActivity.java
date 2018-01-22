@@ -12,17 +12,20 @@ import com.amap.api.navi.AMapNavi;
 import com.amap.api.navi.AMapNaviView;
 import com.amap.api.navi.AMapNaviViewListener;
 
-public class BasicNaviActivity extends AppCompatActivity {
+public class BasicNaviActivity extends BaseActivity {
 
-    AMapNaviView navimap;
-    //private MapView view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_basic_navi);
-        navimap = (AMapNaviView) findViewById(R.id.navi_view);
-        navimap.onCreate(savedInstanceState);
-        /*navimap.setAMapNaviVie147wListener(BasicNaviActivity.this);*/
+        mAMapNaviView = (AMapNaviView) findViewById(R.id.navi_view);
+        mAMapNaviView.onCreate(savedInstanceState);
+        mAMapNaviView.setAMapNaviViewListener(this);
     }
 
+    @Override
+    public void onInitNaviSuccess() {
+        mAMapNavi.calculateWalkRoute(sList.get(0), eList.get(0));
+    }
 }

@@ -35,6 +35,10 @@
         <activity
             android:name=".BasicNaviActivity"
             android:label="@string/title_activity_basic_navi"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".CustomCarActivity"
+            android:label="@string/title_activity_custom_car"
             android:theme="@style/AppTheme"></activity>
     </application>
 
