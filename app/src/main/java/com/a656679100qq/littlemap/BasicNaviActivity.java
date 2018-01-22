@@ -14,15 +14,15 @@ import com.amap.api.navi.AMapNaviViewListener;
 
 public class BasicNaviActivity extends AppCompatActivity {
 
-    //AMapNaviView navimap;
-    private MapView view;
+    AMapNaviView navimap;
+    //private MapView view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic_navi);
-        view = (MapView) findViewById(R.id.navi_view);
-        view.onCreate(savedInstanceState);
-        /*navimap.setAMapNaviViewListener(BasicNaviActivity.this);*/
+        navimap = (AMapNaviView) findViewById(R.id.navi_view);
+        navimap.onCreate(savedInstanceState);
+        /*navimap.setAMapNaviVie147wListener(BasicNaviActivity.this);*/
     }
 
 }
